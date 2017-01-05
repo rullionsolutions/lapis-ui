@@ -1,0 +1,21 @@
+{
+  "name": "lapis-ui",
+  "version": "0.0.0",
+  "description": "User Interface construction components",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rullionsolutions/lapis-ui"
+  },
+  "author": "stephen.d.francis@gmail.com",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "underscore": ">= 1.0.0",
+    "urijs": ">= 1.18.0",
+    "jquery": ">= 3.1.0",
+    "lapis-core": ">= 0.0.0"
+  }
+}

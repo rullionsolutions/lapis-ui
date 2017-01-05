@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="/cdn/twitter-bootstrap-v2.3.2/css/bootstrap.min.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/cdn/twitter-bootstrap-v2.3.2/css/bootstrap-responsive.min.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/cdn/twitter-bootstrap-v2.3.2/css/bootstrap.icon-large.min.css" />
+		<link rel="shortcut icon" href="/cdn/icons/Rullion_R_Logo_32x32.png" id="favicon" />
+	</head>
+
+	<body onunload=""><!-- onunload a fix for a (Firefox?) reload-on-back-button issue -->
+
+		<div class="hidden-phone hidden-tablet" style="height: 60px">
+		</div>
+
+		<nav class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+    			<!-- Collect the nav links, forms, and other content for toggling -->
+				<ul class="nav" id="css_menu_container" role="navigation">
+				</ul>
+				<ul class="nav pull-right" role="navigation">
+					<li class="dropdown">
+						<a id="css_nav_help" role="button" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b> Help</a>
+						<ul class="dropdown-menu pull-right" aria-labelledby="css_nav_help">
+						    <li><a id="css_page_helpw" href="javascript:x.ui.main.openHelp()">Online Help</a></li>
+						    <li><a id="css_page_helpe" href="mailto:rsl.support@rullion.co.uk">Email myRecruiter Support</a></li>
+							<li><a id="css_page_helpt" href="tel:0161 601 3416">Call myRecruiter Support on 0161 601 3416</a></li>
+						</ul>
+					</li>
+					<li class="dropdown css_logged_in">
+						<a id="css_nav_page" role="button" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b> Page</a>
+						<ul class="dropdown-menu pull-right" aria-labelledby="css_nav_page">
+							<li><a target="_blank" class="hidden" id="css_page_print">Printer-Friendly View</a></li>
+							<li><a target="_blank" class="hidden" id="css_page_excel">Export to MS Excel</a></li>
+							<li><a target="_blank" class="hidden" id="css_page_pdf">Export to PDF</a></li>
+						</ul>
+					</li>
+					<li class="dropdown css_logged_in">
+						<a id="css_nav_acnt" role="button" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b> <span class="css_accnt">User</span></a>
+						<ul class="dropdown-menu pull-right" aria-labelledby="css_nav_acnt">
+							<li><a href="index.html?page_id=ac_pswd_change">Change your Password</a></li>
+							<li><a href="index.html?page_id=ac_user_profile_update">Update your Profile</a></li>
+							<li><a href="index.html?page_id=wf_tasks">View your Tasks</a></li>
+						</ul>
+					</li>
+					<li class="css_logged_in" id="css_logout_button">
+						<button class="btn navbar-btn" onclick="x.ui.main.logout()">Log-out</button>
+					</li>
+				</ul>
+			</div><!-- /.navbar-inner -->
+		</nav><!-- /.navbar -->
+
+		<div class="container-fluid" id="css_main">
+			<div class="row-fluid">
+
+				<div class="span2" id="css_left_bar">
+					<div class="css_main_logo hidden-phone">
+						<a href="index.html?page_id=home">
+							image here
+						</a>
+					</div>
+					<div class="css_logged_in">
+						<input type="text" class="input-block-level" id="css_page_unisrch" placeholder="search" />
+					</div>
+					<div class="hidden" id="css_cham_in" ><input type="text" class="input-block-level" placeholder="chameleon log-in" /></div>
+					<div class="hidden" id="css_cham_out"><a href="dyn/?mode=chameleonOut">exit chameleon</a></div>
+					<div id="css_page_links"> </div>
+					<div id="css_messages"> </div>
+				</div>	<!-- #css_left_bar -->
+
+				<div class="span10">
+					<div id="css_nav_icons">
+						<a class="hidden" id="css_nav_prev"  >previous</a>
+						<a class="hidden" id="css_nav_next"  >next</a>
+						<a class="hidden" id="css_nav_search">search</a>
+					</div>
+					<div class="page-header">
+						<h1>
+							<span class="css_page_header_title"></span>
+						</h1>
+						<p class="css_page_header_descr lead"></p>
+					</div>
+
+					<ul id="css_page_tabs" class="nav nav-tabs hidden">
+					</ul>
+
+					<div id="css_body">
+						<div id="css_content">
+							Loading...
+						</div>
+						<div id="css_page_buttons" class="btn-group">
+						</div>
+					</div>	<!-- #css_body -->
+
+				</div>	<!-- .span10 -->
+
+			</div>	<!-- .row-fluid -->
+		</div>	<!-- .container-fluid -->
+
+		<div class="hidden-phone" style="height: 30px">
+		</div>
+
+	 	<footer>
+			<div>
+				<div id="css_footer_copyright"></div>
+			</div>
+			<div>
+				<div id="css_privacy_msg"     ><a href="guest.html?page_id=privacy">Accessibility, Privacy and Cookies</a></div>
+			</div>
+			<div>
+				<div id="css_footer_datetime" ></div>
+			</div>
+		</footer>
+
+		<div id="css_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="css_modal_title" aria-hidden="true">
+  			<div class="modal-dialog" role="document">
+    			<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        				<h4 id="css_modal_title" class="modal-title">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						<div id="modal-messages">
+						</div>
+						<div id="css_modal_content">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div id="css_modal_links">
+						</div>
+						<div id="css_modal_buttons">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="/cdn/jquery-v1.11.3/jquery-1.11.3.min.js"> </script>
+		<script type="text/javascript" src="/cdn/twitter-bootstrap-v2.3.2/js/bootstrap.min.js"> </script>
+		<script type="text/javascript" src="/cdn/underscore/underscore-min.js"> </script>
+
+		<script type="text/javascript" src="../base/Base.js"> </script>
+		<script type="text/javascript" src="../base/Happen.js"> </script>
+		<script type="text/javascript" src="../base/Log.js"> </script>
+		<script type="text/javascript" src="../base/OrderedMap.js"> </script>
+
+		<script type="text/javascript" src="../data/FieldSet.js"> </script>
+		<script type="text/javascript" src="../data/Entity.js"> </script>
+		<script type="text/javascript" src="../data/Text.js"> </script>
+		<script type="text/javascript" src="../data/Text-Validation.js"> </script>
+		<script type="text/javascript" src="../data/Text-Render.js"> </script>
+		<script type="text/javascript" src="../data/Date.js"> </script>
+		<script type="text/javascript" src="../data/Number.js"> </script>
+		<script type="text/javascript" src="../data/Reference.js"> </script>
+		<script type="text/javascript" src="../data/Textarea.js"> </script>
+		<script type="text/javascript" src="../data/Document.js"> </script>
+
+		<script type="text/javascript" src="../store/Store.js"> </script>
+		<script type="text/javascript" src="../store/StoreCouch.js"> </script>
+		<script type="text/javascript" src="../store/StoreIndexedDB.js"> </script>
+
+		<script type="text/javascript" src="Element.js"> </script>
+		<script type="text/javascript" src="Page.js"> </script>
+		<script type="text/javascript" src="Page.Tab.js"> </script>
+		<script type="text/javascript" src="Page.Link.js"> </script>
+		<script type="text/javascript" src="Button.js"> </script>
+		<script type="text/javascript" src="Section.js"> </script>
+		<script type="text/javascript" src="Form.js"> </script>
+		<script type="text/javascript" src="Create.js"> </script>
+		<script type="text/javascript" src="RecordSet.js"> </script>
+		<script type="text/javascript" src="List.js"> </script>
+		<script type="text/javascript" src="List.Column.js"> </script>
+		<script type="text/javascript" src="ListUpdate.js"> </script>
+		<script type="text/javascript" src="MessageManager.js"> </script>
+
+		<script type="text/javascript">
+
+			var store,
+				entity,
+				record,
+				page;
+
+			$(document).ready( function() {
+			 //    store = x.store.StoreCouch.clone({
+				// 	id: "stevief", db_id: "stevief", instance: true, server_url: "localhost:5984"
+				// });
+			    store = x.store.StoreIndexedDB.clone({
+					id: "lapis", db_id: "lapis", store_id: "lapis", instance: true, version: 2,
+					create_properties: { keyPath: "uuid" }
+				});
+
+				store.start();
+
+		    	entity = x.data.Entity.clone({
+		    		id: "tree",
+		    		title: "Tree",
+		    		primary_key: "species"
+		    	});
+			    entity.addFields([
+			    	{ id: "species", type: "Text", label: "Species" },
+			    	{ id: "location", type: "Text", label: "Location" }
+		    	]);
+
+			    page = x.ui.Page.clone({
+			    	id 				: "page",
+				    entity_id       : "tree",
+				    title           : "Update this Tree",
+				    transactional   : true,
+			    	instance 		: true,
+			    	store 			: store,
+			    	selectors: {
+					    content  : "#css_content",
+					    messages : "#css_messages",
+					    links    : "#css_page_links",
+					    buttons  : "#css_page_buttons",
+					    tabs     : "#css_page_tabs",
+					    unisrch  : "input#css_page_unisrch",
+					    datetime : "div#css_footer_datetime",
+					    copyright: "div#css_footer_copyright"
+					},
+			    });
+				page.sections.add({ id: "main", type: "Create", entity_id: "tree" });
+
+			    page.render();
+
+			});
+
+/*
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-36505379-1']);
+			_gaq.push(['_setDomainName', 'rullionsolutions.com']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+*/
+		</script>
+	</body>
+</html>
